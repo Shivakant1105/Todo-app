@@ -26,10 +26,11 @@ function App(props: AppProps) {
 
   const handleAddTodo = () => {
     if (task.trim() !== '') {
-      setTodos([...todos, { id: todos.length + 1, task }]); 
+      setTodos([...todos, { id: todos.length + 1, task }]);
+      setTask('');
     }
   };
-
+  
   const handleRemoveTodo = (index: number) => {
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
